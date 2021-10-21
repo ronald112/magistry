@@ -14,6 +14,13 @@ jboss/server/minimal/tmp/**/*
 jboss/server/minimal/data/**/*
 jboss/server/minimal/work/**/*
 
+# node_modules
+**/node_modules/**
+
+# parcel
+**/.parcel-cache/**
+**/dist/**
+
 # deployed package files #
 
 *.DEPLOYED

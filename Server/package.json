@@ -1,0 +1,13 @@
+{
+    "name": "mongoapp",
+    "version": "1.0.0",
+    "type": "commonjs",
+    "dependencies": {
+        "aws4": "^1.11.0",
+        "express": "^4.16.0",
+        "mongodb": "^3.1.0",
+        "mongodb-client-encryption": "^1.2.6",
+        "mongoose": "^5.13.3",
+        "net": "^1.0.2"
+    }
+}
