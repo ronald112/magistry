@@ -47,7 +47,7 @@ const _pointer = new THREE.Vector2();
 const _onUpPosition = new THREE.Vector2();
 const _onDownPosition = new THREE.Vector2();
 
-const _geometry = new THREE.BoxGeometry(8, 8, 8);
+const _geometry = new THREE.BoxGeometry(3, 3, 3);
 let _dotTransformControl;
 let _twoDimensionalArray = [
                             [undefined]
@@ -58,7 +58,7 @@ let _surfaceMeshes = [], _lineWires = [];
 let _surfacePoints = [[]];
 
 let _isAllVisible = true;
-var _newPointDistanceFromAnchor = 80;
+var _newPointDistanceFromAnchor = 15;
 let _map = THREE.Texture;
 let _patchGroupe = new THREE.Object3D();
 let _sceneObjects = new THREE.Group();
@@ -400,7 +400,6 @@ function addIndependentPointToScene(root, axis, direction, distance, color = Mat
     return mesh;
 }
 
-
 //#region X patch
 function updateUndefinedPointByXAxis(newPatchDirection, pointPlaceDirection) {
     let pos = new THREE.Vector3();
@@ -615,7 +614,7 @@ function addPatchByXY(newPatchDirection, isDown) {
         _twoDimensionalArray[i].unshift(undefined);
     }
 }
-
+//#endregion
 function createStartPatch() {
     var obj = addPoint();
     _patchGroupe.add(obj);
@@ -626,7 +625,7 @@ function createStartPatch() {
                                 obj]);
     
     
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 4; i++) {
         switch (i) {
             case 1:
                 tempPosition.x += _newPointDistanceFromAnchor;
@@ -674,7 +673,7 @@ function getSurfaceHelperObjects(position, color = Math.random() * 0xffffff) {
     object.receiveShadow = true;
     return object;
 }
-//#endregion
+
 //#endregion
 
 //#region GUI DECLARING
